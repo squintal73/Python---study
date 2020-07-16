@@ -1,0 +1,23 @@
+p(venv) squintal@squintal:~/PROJETOS/proj001$ python manage.py shell
+Python 3.8.2 (default, Apr 27 2020, 15:53:34) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from simplemooc.courses.models import Course
+>>> d = Course(name='Python com Django',slug='django')
+>>> d.save()
+>>> d.id
+2
+>>> p = Course(name='Python DEVs',slug='devopls')
+>>> p.save()
+>>> p.id
+3
+>>> c = Course.objects.all()
+>>> for i in c:
+...      print(i.name)
+... 
+Python com Django
+Python DEVs
+>>> 
+
+

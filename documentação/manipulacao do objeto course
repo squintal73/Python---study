@@ -1,0 +1,19 @@
+python manager.py shell
+
+
+>>> from simplemooc.courses.models import Course
+>>> course = Course()
+>>> course.name = "Python na Web"
+>>> course.slug = "django"
+>>> from datetime import date
+>>> course.start_date = date.today()
+>>> course.save()
+>>> course.id
+1
+>>> course.name = "Python com django"
+>>> course.slug = "django3"
+>>> course.start_date = date.today()
+>>> course.save()
+>>> course.delete()
+(1, {'courses.Course': 1})
+>>> 
